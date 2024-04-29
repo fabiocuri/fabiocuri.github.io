@@ -1,129 +1,254 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fabio Curi</title>
-  <style>
-    body {
-      font-family: monospace;
-      font-size: 14px;
-      margin: 0;
-      padding: 0;
-    }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabio Curi</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+	<script src="https://danppun.neocities.org/css/extra.js"></script>
+	<style>
+			.wrap {
+			width: 120px;
+		}
 
-    a {
-      color: #615f59;
-      text-decoration: none;
-    }
+		.widget {
+			width: 120px;
+			
+			
+		}
 
-    a:hover {
-      color: #db967f;
-    }
+		.widget p {
+			display: inline-block;
+			line-height: 3px;
+		}
 
-    h3 {
-      margin-top: 0px;
-    }
+		.fecha {
+			width: 100px;
+			text-align: center;
+			border-radius: 9px;
+			background: rgb(255, 254, 254);
+			color: #3e2a2b;
+			font-size: 11px;
+			height: 20px;
+			margin-left:20px;
+			box-shadow:  1px 1px 0px black; 
+		}
 
-    .cuerpo {
-      background: white;
-      height: 100vh;
-      width: 100vw;
-    }
+		.reloj {
+			position:relative;
+			bottom:22px;right:110px;
+			width: 120px;
+			height:20px;
+			text-align: center;
+			border-radius: 9px;
+			background: rgb(255, 255, 255);
+			color: #3e2a2b;
+			font-size: 11px;
+			
+			box-shadow:  1px 1px 0px black;
+			
+		}
 
-    .caja {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      height: calc(100vh - 20px); /* Subtracting top and bottom margins */
-    }
+		.reloj .caja-segundos {
+			display: inline-block;
+			font-size: 11px;
+		}
 
-    #menu {
-      height: calc(100% - 20px); /* Subtracting top and bottom margins */
-      overflow: auto;
-      padding: 10px;
-    }
+		.reloj .segundos, .reloj .ampm {
+			display: inline-block ;
+		}
+			
+	</style>
+	<style>
+		body{
+			font-family: monospace;
+			font-size: 14px;
+		}
+		
+		iframe{
+			border:none;
+		}
+		
+		a {
+			color:#615f59;
+		}
+		
+		a:hover{
+			color:#db967f;
+		}
+		
+		p, marquee {
+			color:#403f3e;
+			
+		}
+		
+		h3{
+			margin-top:0px;
+		}
+		
+		.contenido p{
+			margin-left:10px;
+		}
+	
+		.cuerpo{
+			background:white;
+			margin:auto;
+			height:900px;
+			width:1000px;
+			
+		}
+		
+		.caja{
+			display:grid;
+			grid-template-columns: 180px 820px;
+		}
+		
+			#menu{
+				position:relative;
+				height:740px;
+			}
+			
+			#mspace {
+			margin-left:20px;
+			}
+		
+		.contenido{
+			height:100%;
+		}
+		
+		table {
+			background: rgb(255,255,255);
+			background: linear-gradient(90deg, rgba(255,255,255,1) 75%, rgba(199,199,199,1) 100%);
+		}
+			
+		.insides{
+			display:grid;
+			grid-template-columns: 410px 410px;
+		}
+			
+			#sides{
+				background:url();
+				margin:auto;
+				width:90%;
+				border-radius:10px;
+				
+			}
+		.uptade{
+			font-size:12px;
+			position:absolute;
+			bottom:0px;
+			height:300px;
+			width:100%;
+			border-left:0px;
+		}
+		
+	</style>
+	</head>
+	<body>
+		<div class="cuerpo">
+			<table style="border-bottom:1px solid black;width:100%;height:auto;">
+				<tr>
+					<td style="position:relative;">
+				
+					<p><span style="color:#cc866e;font-size:12px;font-weight:700;position:absolute;bottom:0px;left:10px;">
+						**Alert: This website has pages with automatic music and it's not mobile friendly
+						</span></p>
+					
+						<div id="reloj" style="position:absolute;top:1px;right:4px;">
+							<!--Digital clock--> <!--Clock from vermoonper.neocities.org-->
+								<div class="wrap" style="">
+									<div class="widget">
+										<!--Fecha = Date, Dia semana = Day week, Mes = Month, Dia = Day-->
+										<div class="fecha">
+											  <p id="diaSemana" class="diaSemana"></p>
+											  <p>,</p>
+											  <p id="mes" class="mes"></p>
+											  <p id="dia" class="dia"></p>
+										</div>
 
-    .contenido {
-      height: 100%;
-      overflow: auto;
-      padding: 10px;
-    }
+										  <!--Reloj = Clock, (Horas, Minutos, Segundos) = (Hours, Minutes, Seconds)-->
+										  <div class="reloj">
+											  <p id="horas" class="horas"></p>
+											  <p>:</p>
+											  <p id="minutos" class="minutos"></p>
+											  <p>:</p>
+											  <div class="caja-segundos">
+											  <p id="segundos" class="segundos"></p>
+											  <p id="ampm" class="ampm"></p>
+											  </div>
+										  </div>
+									</div>
+								  <script type="text/javascript" src="https://danppun.neocities.org/css/reloj.js"></script>
+								</div>        
+						</div>
+						<div id='mobring' style="position:absolute;bottom:0px;right:20px;">
+							<script type="text/javascript" src="https://sugarforbrains.neocities.org/mobring/onionring-variables.js"></script>
+							<script type="text/javascript" src="https://sugarforbrains.neocities.org/mobring/small-widget.js"></script>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class="caja">
+				<div id="menu">
+					<center><h3>Navigation</h3></center>
+					<div id="mspace">
+					<img src="https://danppun.neocities.org/v3/index/icon_star.gif" > <a href="https://danppun.123guestbook.com/">Sign my Guestbook</a><br>
+					<img src="https://danppun.neocities.org/v3/index/icon_star.gif" > <a href="https://danppun.neocities.org/about.html">About me</a><br>
+					<img src="https://danppun.neocities.org/v3/index/icon_star.gif" > <a href="https://d3bansen.dreamwidth.org/">Blog</a><br>
+					<img src="https://danppun.neocities.org/v3/index/icon_star.gif" > <a href="https://danppun.neocities.org/gallery.html">Gallery</a><br>
+					<img src="https://danppun.neocities.org/v3/index/icon_star.gif" > <a href="https://danppun.neocities.org/link">Links</a><br>
+					<img src="https://danppun.neocities.org/v3/index/icon_star.gif" > <a href="https://danppun.neocities.org/dfg">Shrines</a><br>
+					<img src="https://danppun.neocities.org/v3/index/icon_star.gif" > <a href="https://danppun.neocities.org/sitemap">Sitemap</a><br>
+					<img src="https://danppun.neocities.org/v3/index/icon_star.gif" > <a href="https://neocities.org/site/danppun">Neocities profile</a><br>
+					
+					</div><br>
+					
+					<center>
+						<h3>Link to my site!</h3>
+					</center>	<br>
+						
+						<table id="wm">
+							<center><h3 style="margin-bottom:2px;">About Webmaster</h3></center>
+							
+								<tr>
+									<td>Name:</td><td>Dan</td>
+								</tr>
+								<tr>
+									<td>Ocuppation:</td><td>Uni student</td>
+								</tr>
+								<tr>
+									<td>Nationality:</td><td>Chilean</td>
+								</tr>
+								<tr>
+									<td>DOB:</td><td>31. 03. 2004</td>
+								</tr>
+							
+						</table>
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 10px;
-    }
-
-    table, th, td {
-      border: 1px solid black;
-    }
-
-    th, td {
-      padding: 8px;
-      text-align: left;
-    }
-
-    .insides {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-  </style>
-</head>
-<body>
-<div class="cuerpo">
-  <div class="caja">
-    <div id="menu">
-      <center><h3>Navigation</h3></center>
-      <div id="mspace">
-        <img src="https://danppun.neocities.org/v3/index/icon_star.gif"> <a href="https://danppun.123guestbook.com/">Sign my Guestbook</a><br>
-        <img src="https://danppun.neocities.org/v3/index/icon_star.gif"> <a href="https://danppun.neocities.org/about.html">About me</a><br>
-        <img src="https://danppun.neocities.org/v3/index/icon_star.gif"> <a href="https://d3bansen.dreamwidth.org/">Blog</a><br>
-        <img src="https://danppun.neocities.org/v3/index/icon_star.gif"> <a href="https://danppun.neocities.org/gallery.html">Gallery</a><br>
-        <img src="https://danppun.neocities.org/v3/index/icon_star.gif"> <a href="https://danppun.neocities.org/link">Links</a><br>
-        <img src="https://danppun.neocities.org/v3/index/icon_star.gif"> <a href="https://danppun.neocities.org/dfg">Shrines</a><br>
-        <img src="https://danppun.neocities.org/v3/index/icon_star.gif"> <a href="https://danppun.neocities.org/sitemap">Sitemap</a><br>
-        <img src="https://danppun.neocities.org/v3/index/icon_star.gif"> <a href="https://neocities.org/site/danppun">Neocities profile</a><br>
-      </div><br>
-      <center>
-        <h3>Link to my site!</h3>
-      </center>	<br>
-      <table id="wm">
-        <caption><h3>About Webmaster</h3></caption>
-        <tr>
-          <td>Name:</td><td>Dan</td>
-        </tr>
-        <tr>
-          <td>Occupation:</td><td>Uni student</td>
-        </tr>
-        <tr>
-          <td>Nationality:</td><td>Chilean</td>
-        </tr>
-        <tr>
-          <td>DOB:</td><td>31. 03. 2004</td>
-        </tr>
-      </table>
-    </div>
-    <div class="contenido">
-      <p>
-        I have over seven years of experience in applying machine learning, data engineering, site reliability engineering, and DevOps principles and tools to various domains and projects. I am skilled in using different technologies to design, implement, and maintain data pipelines, models, and systems.
-      </p>
-      <div class="insides">
-        <div>
-          <div class="uptade">
-            <iframe src="https://danppun.neocities.org/updates" height="100%" width="100%" frameborder="0"></iframe>
-          </div>
-        </div>
-        <div>
-          <p style="text-align:justify;">
-            This is a TikTok video I came across some weeks ago; the dancing captivated me so much I couldn't forget about it. Then some days ago, the song was eating my insides, I hadn't watched the video in a while because I uninstalled TikTok, so I urged one of my friends to look it up for me. From what I learned, this is a Polish dance called Oberek, that would be translated to something like "to spin"; it's a very lively dance that has a lot of different dance moves, this one with the knees being one of them. What called my attention the most was the fact that the women in the dance lift the entire body weight of the men in certain moves; it's really impressive!
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<center><p style="background:white;">danppun 2021 - when time ends</p></center>
-</body>
+				</div>
+				
+				<div class="contenido">
+						<p style="margin-right:10px;">
+						I have over seven years of experience in applying machine learning, data engineering, site reliability engineering, and DevOps principles and tools to various domains and projects. I am skilled in using different technologies to design, implement, and maintain data pipelines, models, and systems.</p>
+						
+						<div class="insides">
+							<div style="position:relative;">
+								
+								
+									<div class="uptade">
+										<iframe src="https://danppun.neocities.org/updates" height="100%" width="100%"></iframe>
+									</div>
+							</div>
+							<div id="sides">
+								<p style="margin-right:10px;text-align:justify;">This is a tiktok a came across some weeks ago, the dancing captivated me so much I couldn't forget about it, then some days ago the song was eating my insides, I hadn't
+								watch the video in a while because I uninstall tiktok, so I urged one of my friends to look it up for me.<br>From what I learned, this is a Polish dance called Oberek, that would
+								be translated to something like "to spin"; it's a very lively dance that has a lot of different dance moves, this one with the knees being one of them.<br>What called my attention the most was the fact that the women
+								in the dance lift the entire body weight of the men in certain moves, it's really impressive!</p>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<center><p style="background:white;">danppun 2021 - when time ends</p></center>
+	</body>
 </html>
