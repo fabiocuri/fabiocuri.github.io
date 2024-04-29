@@ -8,8 +8,8 @@
         body {
             font-family: monospace;
             font-size: 14px;
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
+            margin: 0;
+            padding: 0;
         }
 
         hr {
@@ -19,7 +19,7 @@
             border: none;
             height: 1px;
             background-color: black;
-            z-index: 1; /* Ensure the horizontal line is above other content */
+            z-index: 1;
         }
         
         .left-container-up {
@@ -28,8 +28,8 @@
             margin-top: 10%;
             position: fixed;
             overflow-y: auto;
-            background-color: white; /* Set default background color */
-            z-index: 0; /* Ensure the left container content is below the horizontal line */
+            background-color: white;
+            z-index: 0;
         }
 
         .left-container-down {
@@ -43,9 +43,10 @@
         .right-container {
             margin-top: 10%;
             margin-left: 50%;
+            margin-right: 10%;
             float: right;
-            z-index: 2; /* Ensure the right container content is above the horizontal line */
-            position: relative; /* Ensure the right container content scrolls normally */
+            z-index: 2;
+            position: relative;
         }
         
         .heading {
