@@ -11,12 +11,12 @@
         }
 
         hr {
-            position: fixed; /* Set position to fixed */
-            top: 50px; /* Adjust top margin to lower the line */
-            width: 100%; /* Set line width to full */
-            border: none; /* Remove border */
-            height: 1px; /* Set line height */
-            background-color: black; /* Set line color */
+            position: fixed;
+            top: 50px;
+            width: 100%;
+            border: none;
+            height: 1px;
+            background-color: black;
         }
         
         .left-container-up {
@@ -25,6 +25,7 @@
             margin-top: 10%;
             position: fixed;
             overflow-y: auto;
+            background-color: white; /* Set default background color */
         }
 
         .left-container-down {
@@ -79,7 +80,7 @@
 </head>
 <body>
     <hr>
-    <div class="left-container-up">
+    <div class="left-container-up" id="left-container-up">
         <!-- HEADING -->
         <strong>Fabio Curi</strong>
         <div>Email: <a href="mailto:fcuri91@gmail.com">fcuri91@gmail.com</a></div>
@@ -203,5 +204,17 @@
         <div class="list-item">Vice-president of the Association Franco-Brésilienne pour les Peuples - <a href="https://www.helloasso.com/associations/afbp-association-franco-bresilienne-pour-les-peuples">Access link</a></div>
         <div class="list-item">Community Manager at the French radio program Les Mots du Brésil, at Radio Occitania - <a href="http://www.mixcloud.com/lesmotsdubresil">Access link</a></div>
     </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var leftContainerUp = document.getElementById('left-container-up');
+            var hr = document.querySelector('hr');
+            if (window.scrollY < hr.offsetTop) {
+                leftContainerUp.style.backgroundColor = 'white';
+            } else {
+                leftContainerUp.style.backgroundColor = '';
+            }
+        });
+    </script>
 </body>
 </html>
