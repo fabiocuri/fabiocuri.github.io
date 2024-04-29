@@ -1,51 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fabio Curi</title>
-<link href="/style.css" rel="stylesheet" type="text/css" media="all">
-<style>
-  body {
-    font-family: monospace;
-    font-size: 14px;
-    color: #403f3e;
-  }
-  .main {
-    background: white;
-    margin: auto;
-    height: 900px;
-    width: 1000px;
-  }
-  .container {
-    display: grid;
-    grid-template-columns: 180px 820px;
-  }
-  .cv {
-    border: #403f3e;
-  }
-  #description {
-    margin-right: auto;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .subsection {
+            margin-bottom: 10px;
+        }
+        .subsubsection {
+            margin-bottom: 5px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
-<div class="main">
-  <div class="container">
-    <div id="description">
-        <p>Fabio Curi</p>
-        <p>AI Data Engineer</p>
-        <img src="./images/image-profile.JPG" alt="Description of the image">
-        <p style="text-align:justify;">
-            I have over seven years of experience in applying machine learning, data engineering, site reliability engineering, and DevOps principles and tools to various domains and projects. I am skilled in using different technologies to design, implement, and maintain data pipelines, models, and systems.
-        </p>
-    </div>
-    <div class="cv">
-        <div id="sides">
-            <p style="text-align:justify;">This is a tiktok a came across some weeks ago, the dancing captivated me so much I couldn't forget about it, then some days ago the song was eating my insides, I hadn't watch the video in a while because I uninstall tiktok, so I urged one of my friends to look it up for me.<br>From what I learned, this is a Polish dance called Oberek, that would be translated to something like "to spin"; it's a very lively dance that has a lot of different dance moves, this one with the knees being one of them.<br>What called my attention the most was the fact that the women in the dance lift the entire body weight of the men in certain moves, it's really impressive!</p>
+    <div class="container">
+        <header>
+            <h1>John Doe</h1>
+            <p>Email: john@example.com | Phone: +1234567890</p>
+        </header>
+        <hr>
+        <div class="section">
+            <h2>Education</h2>
+            <div class="subsection">
+                <h3>University of Example</h3>
+                <p>Bachelor of Science in Computer Science | 2015 - 2019</p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Experience</h2>
+            <div class="subsection">
+                <h3>Software Engineer</h3>
+                <p>ABC Company | 2019 - Present</p>
+                <ul>
+                    <li>Developed web applications using HTML, CSS, and JavaScript.</li>
+                    <li>Collaborated with cross-functional teams to deliver high-quality software products.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="subsection">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="subsection">
+                <h3>Project A</h3>
+                <p>Description of Project A.</p>
+            </div>
+            <div class="subsection">
+                <h3>Project B</h3>
+                <p>Description of Project B.</p>
+            </div>
         </div>
     </div>
-  </div>
-</div>
 </body>
 </html>
