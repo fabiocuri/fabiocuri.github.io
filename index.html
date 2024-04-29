@@ -1,11 +1,97 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De Bruits</title>
-</head>
-<body>
-    <h1>De Bruits2</h1>
-    <p>test test</p>
-</body>
+<html>
+    <head>
+        <title>Class Page Layout</title>
+        <style type="text/css">
+            body {
+                font-family:'Courier New';
+                font-size:1em;
+                background-color:gray;
+            }
+
+            ul {
+                margin:0px;
+            }
+
+            #container {
+                width:800px;
+                margin-left:auto;
+                margin-right:auto;
+            }
+
+            #header {
+                height:50px;
+                padding:10px;
+                margin:0px;
+                background-color:#FFFF66;
+            }
+
+            #mainContent {
+                height:400px;
+            }
+
+            #leftSection {
+                background-color:#99FFFF;
+                width:25%;
+                float:left;
+                height:100%;
+            }
+
+            #centreSection {
+                background-color:#00FF00;
+                width:50%;
+                float:left;
+                height:100%;
+            }
+
+            #rightSection {
+                background-color:#99FFFF;
+                width:25%;
+                float:left;
+                height:100%;
+            }
+
+            #footer {
+                clear:both;
+                height:50px;
+                padding:10px;
+                margin:0px;
+                background-color:#FFFF66;
+            }
+
+            #footerLeft {
+                float:left;
+            }
+
+            #footerRight  {
+                float:right;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">Header</div>
+            <div id="mainContent">
+                <div id="leftSection">
+                    <ul>
+                        <li>One</li>
+                        <li>Two</li>
+                    </ul>
+                </div>
+                <div id="centreSection">
+                    <h1>Heading</h1>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                </div>
+                <div id="rightSection">
+                    <ul>
+                        <li>One</li>
+                        <li>Two</li>
+                    </ul>
+                </div>
+            </div>            
+            <div id="footer">
+                <div id="footerLeft">Footer</div>
+                <div id="footerRight">Copyleft 2013</div>
+            </div>
+        </div>
+    </body>
 </html>
