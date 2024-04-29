@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabio Curi Paixão - Resume</title>
+    <title>Fabio Curi</title>
     <style>
         body {
             font-family: monospace;
             font-size: 14px;
         }
         
-        .left-container {
+        .left-container-up {
             max-width: 30%;
             margin-left: 10%;
             padding: 20px;
             position: fixed; /* Set position to fixed */
             top: 0; /* Position it at the top of the viewport */
+            bottom: 0; /* Extend it to the bottom of the viewport */
+            overflow-y: auto; /* Add scroll if content exceeds viewport height */
+        }
+
+        .left-container-down {
+            max-width: 30%;
+            margin-left: 10%;
+            padding: 20px;
+            position: fixed; /* Set position to fixed */
+            top: 30; /* Position it at the top of the viewport */
             bottom: 0; /* Extend it to the bottom of the viewport */
             overflow-y: auto; /* Add scroll if content exceeds viewport height */
         }
@@ -65,9 +75,9 @@
     </style>
 </head>
 <body>
-    <div class="left-container">
+    <div class="left-container-up">
         <!-- HEADING -->
-        <div class="heading">Fabio Curi Paixão</div>
+        <div class="heading">Fabio Curi</div>
         <div>Email: <a href="mailto:fcuri91@gmail.com">fcuri91@gmail.com</a></div>
         <div>Nationalities: Portuguese and Brazilian</div>
         <div>
@@ -75,9 +85,12 @@
             <a href="https://www.linkedin.com/in/fabio-curi-paixao/">LinkedIn</a>
         </div>
         <img src="./images/image-profile.JPG" alt="Fabio Curi Paixão">
+    </div>
+
+    <div class="left-container-down">
         <p>I have over seven years of experience in applying machine learning, data engineering, site reliability engineering, and DevOps principles and tools to various domains and projects. I am skilled in using different technologies to design, implement, and maintain data pipelines, models, and systems.</p>
     </div>
-    
+
     <div class="right-container">
         <!-- EDUCATION -->
         <div class="section-heading">Education</div>
