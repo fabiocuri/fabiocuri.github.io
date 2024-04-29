@@ -8,6 +8,8 @@
         body {
             font-family: monospace;
             font-size: 14px;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
         }
 
         hr {
@@ -17,6 +19,7 @@
             border: none;
             height: 1px;
             background-color: black;
+            z-index: 1; /* Ensure the horizontal line is above other content */
         }
         
         .left-container-up {
@@ -26,6 +29,7 @@
             position: fixed;
             overflow-y: auto;
             background-color: white; /* Set default background color */
+            z-index: 0; /* Ensure the left container content is below the horizontal line */
         }
 
         .left-container-down {
@@ -40,6 +44,8 @@
             max-width: 50%;
             margin-top: 10%;
             float: right;
+            z-index: 2; /* Ensure the right container content is above the horizontal line */
+            position: relative; /* Ensure the right container content scrolls normally */
         }
         
         .heading {
@@ -96,7 +102,7 @@
         <p>I have over seven years of experience in applying machine learning, data engineering, site reliability engineering, and DevOps principles and tools to various domains and projects. I am skilled in using different technologies to design, implement, and maintain data pipelines, models, and systems.</p>
     </div>
 
-    <div class="right-container">
+    <div class="right-container" id="right-container">
         <!-- EDUCATION -->
         <strong>Education</strong>
         <strong>MSc in Artificial Intelligence</strong>
@@ -206,10 +212,11 @@
     </div>
 
     <script>
-        window.addEventListener('scroll', function() {
-            var leftContainerUp = document.getElementById('right-container');
-            var hr = document.querySelector('hr');
-            if (window.scrollY < hr.offsetTop) {
+        var leftContainerUp = document.getElementById('left-container-up');
+        var rightContainer = document.getElementById('right-container');
+        
+        rightContainer.addEventListener('scroll', function() {
+            if (rightContainer.scrollTop > 0) {
                 leftContainerUp.style.backgroundColor = 'white';
             } else {
                 leftContainerUp.style.backgroundColor = '';
