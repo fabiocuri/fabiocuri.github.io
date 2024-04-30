@@ -6,72 +6,77 @@
     <title>Fabio Curi</title>
     <style>
         body {
-            font-family: monospace;
-            font-size: 14px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
         }
         
-        .left-container-up {
-            max-width: 30%;
-            margin-left: 20%;
-            margin-top: 10%;
-            position: fixed;
-            overflow-y: auto;
-            background-color: white;
-            z-index: 0;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
         }
 
-        .left-container-down {
-            max-width: 20%;
-            margin-left: 20%;
-            margin-top: 25%;
-            position: fixed;
-            overflow-y: auto;
+        .left-container {
+            max-width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
         }
-        
+
         .right-container {
-            margin-top: 10%;
-            margin-left: 50%;
-            margin-right: 10%;
-            float: right;
-            z-index: 2;
-            position: relative;
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
         }
-        
-        .heading {
-            font-size: 24px;
-            font-weight: bold;
+
+        .profile img {
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        
-        .section-heading {
+
+        .bio {
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        h3 {
+            margin-top: 0;
             font-size: 20px;
-            font-weight: bold;
+            color: #333;
         }
-        
-        .subheading {
-            font-size: 18px;
-            font-weight: bold;
+
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
         }
-        
-        .subheading i {
-            font-style: italic;
-        }
-        
+
         .list-item {
-            margin-bottom: 5px;
+            margin-left: 30px;
         }
-        
-        .list-item i {
-            margin-right: 5px;
+
+        .list-item:before {
+            content: "•";
+            margin-right: 10px;
+            color: #666;
         }
-        
-        .publication-item {
-            margin-bottom: 10px;
+
+        a {
+            color: #007bff;
+            text-decoration: none;
         }
-        
-        .publication-item i {
-            margin-right: 5px;
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
